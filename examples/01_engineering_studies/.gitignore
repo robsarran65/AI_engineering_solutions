@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+intake_report.json
+mesa_report.json
+ai_report.json

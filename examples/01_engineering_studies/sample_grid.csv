@@ -1,0 +1,4 @@
+asset_id,timestamp,load_mva,rating_mva
+LINE_A,2026-10-29T12:00:00Z,85,100
+LINE_B,2026-10-29T12:00:00Z,70,100
+TX_C,2026-10-29T12:00:00Z,95,100

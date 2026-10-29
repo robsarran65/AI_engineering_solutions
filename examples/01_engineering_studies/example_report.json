@@ -1,0 +1,139 @@
+{
+  "offering": "Engineering Studies & System Analysis",
+  "synthetic": true,
+  "created_utc": "2026-10-29T13:58:46.394384+00:00",
+  "study_context": {
+    "prototype_focus": "Substation load-growth screening and study intake",
+    "public_service_alignment": "System Planning, Studies & Analysis / Load Growth Projections",
+    "source_url": "https://www.mesainc.com/power-delivery/substations-switchyard/",
+    "reviewed_on": "2026-10-29",
+    "demo_band_policy": {
+      "watch_at_percent": 90.0,
+      "high_at_percent": 100.0
+    },
+    "calculation_limits": [
+      "Linear load scaling only; no network model or power flow",
+      "Bands are illustrative; they do not establish safety or compliance"
+    ],
+    "unknowns": [
+      "Client study objectives and approved acceptance criteria",
+      "Authoritative network model, asset ratings, and data quality rules",
+      "Approved study software and available integration/export interfaces"
+    ]
+  },
+  "status": "REQUIRES_ENGINEER_REVIEW",
+  "intake": {
+    "assets": [
+      {
+        "asset_id": "LINE_A",
+        "timestamp": "2026-10-29T12:00:00+00:00",
+        "load_mva": 85.0,
+        "rating_mva": 100.0
+      },
+      {
+        "asset_id": "LINE_B",
+        "timestamp": "2026-10-29T12:00:00+00:00",
+        "load_mva": 70.0,
+        "rating_mva": 100.0
+      },
+      {
+        "asset_id": "TX_C",
+        "timestamp": "2026-10-29T12:00:00+00:00",
+        "load_mva": 95.0,
+        "rating_mva": 100.0
+      }
+    ],
+    "readiness": "PASS",
+    "rows": 3,
+    "input_sha256": "17e5b896b698ea47b2f420631e08f17f364b6d8555411590b317ef7a557fc6c9"
+  },
+  "limitations": [
+    "Illustrative utilization screening only; no network topology",
+    "No AC/DC power flow, outage redistribution, or PMU processing",
+    "Demo thresholds; no compliance or operating conclusions"
+  ],
+  "ranked_findings": [
+    {
+      "asset_id": "TX_C",
+      "scenario": "load_growth_20_percent",
+      "multiplier": 1.2,
+      "projected_mva": 114.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 113.99999999999999,
+      "screening_band": "HIGH"
+    },
+    {
+      "asset_id": "TX_C",
+      "scenario": "load_growth_10_percent",
+      "multiplier": 1.1,
+      "projected_mva": 104.50000000000001,
+      "rating_mva": 100.0,
+      "utilization_percent": 104.50000000000001,
+      "screening_band": "HIGH"
+    },
+    {
+      "asset_id": "LINE_A",
+      "scenario": "load_growth_20_percent",
+      "multiplier": 1.2,
+      "projected_mva": 102.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 102.0,
+      "screening_band": "HIGH"
+    },
+    {
+      "asset_id": "TX_C",
+      "scenario": "baseline",
+      "multiplier": 1.0,
+      "projected_mva": 95.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 95.0,
+      "screening_band": "WATCH"
+    },
+    {
+      "asset_id": "LINE_A",
+      "scenario": "load_growth_10_percent",
+      "multiplier": 1.1,
+      "projected_mva": 93.50000000000001,
+      "rating_mva": 100.0,
+      "utilization_percent": 93.50000000000001,
+      "screening_band": "WATCH"
+    },
+    {
+      "asset_id": "LINE_A",
+      "scenario": "baseline",
+      "multiplier": 1.0,
+      "projected_mva": 85.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 85.0,
+      "screening_band": "LOW"
+    },
+    {
+      "asset_id": "LINE_B",
+      "scenario": "load_growth_20_percent",
+      "multiplier": 1.2,
+      "projected_mva": 84.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 84.0,
+      "screening_band": "LOW"
+    },
+    {
+      "asset_id": "LINE_B",
+      "scenario": "load_growth_10_percent",
+      "multiplier": 1.1,
+      "projected_mva": 77.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 77.0,
+      "screening_band": "LOW"
+    },
+    {
+      "asset_id": "LINE_B",
+      "scenario": "baseline",
+      "multiplier": 1.0,
+      "projected_mva": 70.0,
+      "rating_mva": 100.0,
+      "utilization_percent": 70.0,
+      "screening_band": "LOW"
+    }
+  ],
+  "ai_status": "NOT_REQUESTED"
+}
