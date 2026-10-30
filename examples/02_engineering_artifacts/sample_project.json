@@ -1,0 +1,27 @@
+{
+  "project_id": "MESA-DEMO-002",
+  "title": "Synthetic substation documentation pilot",
+  "synthetic": true,
+  "currency": "USD",
+  "contingency_percent": "15",
+  "requirements": [
+    {"id": "REQ-001", "text": "Prepare a conceptual documentation package for an assumed substation equipment replacement; do not select equipment ratings."},
+    {"id": "REQ-002", "text": "Identify required existing drawings and unknown engineering inputs before detailed design."},
+    {"id": "REQ-003", "text": "Provide a preliminary cost estimate, dependency-based schedule, and traceable review checklist."}
+  ],
+  "cost_items": [
+    {"id": "COST-001", "description": "Illustrative engineering labor", "quantity": "40", "unit": "hour", "unit_cost": "125"},
+    {"id": "COST-002", "description": "Illustrative document preparation", "quantity": "16", "unit": "hour", "unit_cost": "80"},
+    {"id": "COST-003", "description": "Illustrative review labor", "quantity": "8", "unit": "hour", "unit_cost": "150"}
+  ],
+  "tasks": [
+    {"id": "TASK-001", "name": "Collect project inputs", "duration_days": 2, "depends_on": []},
+    {"id": "TASK-002", "name": "Draft conceptual package", "duration_days": 3, "depends_on": ["TASK-001"]},
+    {"id": "TASK-003", "name": "Prepare estimate", "duration_days": 2, "depends_on": ["TASK-001"]},
+    {"id": "TASK-004", "name": "Engineer review", "duration_days": 2, "depends_on": ["TASK-002", "TASK-003"]}
+  ],
+  "approved_reference_notes": [
+    {"id": "REF-001", "text": "Demo project rule: mark every deliverable as a draft for engineer review."},
+    {"id": "REF-002", "text": "Demo project rule: do not claim regulatory compliance or invent standards, equipment ratings, or field measurements."}
+  ]
+}

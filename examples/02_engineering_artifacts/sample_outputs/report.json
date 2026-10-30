@@ -1,0 +1,232 @@
+{
+  "project_id": "MESA-DEMO-002",
+  "mode": "offline",
+  "synthetic": true,
+  "input_evidence": {
+    "project_id": "MESA-DEMO-002",
+    "title": "Synthetic substation documentation pilot",
+    "synthetic": true,
+    "currency": "USD",
+    "contingency_percent": "15",
+    "requirements": [
+      {
+        "id": "REQ-001",
+        "text": "Prepare a conceptual documentation package for an assumed substation equipment replacement; do not select equipment ratings."
+      },
+      {
+        "id": "REQ-002",
+        "text": "Identify required existing drawings and unknown engineering inputs before detailed design."
+      },
+      {
+        "id": "REQ-003",
+        "text": "Provide a preliminary cost estimate, dependency-based schedule, and traceable review checklist."
+      }
+    ],
+    "cost_items": [
+      {
+        "id": "COST-001",
+        "description": "Illustrative engineering labor",
+        "quantity": "40",
+        "unit": "hour",
+        "unit_cost": "125"
+      },
+      {
+        "id": "COST-002",
+        "description": "Illustrative document preparation",
+        "quantity": "16",
+        "unit": "hour",
+        "unit_cost": "80"
+      },
+      {
+        "id": "COST-003",
+        "description": "Illustrative review labor",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_cost": "150"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "TASK-001",
+        "name": "Collect project inputs",
+        "duration_days": 2,
+        "depends_on": []
+      },
+      {
+        "id": "TASK-002",
+        "name": "Draft conceptual package",
+        "duration_days": 3,
+        "depends_on": [
+          "TASK-001"
+        ]
+      },
+      {
+        "id": "TASK-003",
+        "name": "Prepare estimate",
+        "duration_days": 2,
+        "depends_on": [
+          "TASK-001"
+        ]
+      },
+      {
+        "id": "TASK-004",
+        "name": "Engineer review",
+        "duration_days": 2,
+        "depends_on": [
+          "TASK-002",
+          "TASK-003"
+        ]
+      }
+    ],
+    "approved_reference_notes": [
+      {
+        "id": "REF-001",
+        "text": "Demo project rule: mark every deliverable as a draft for engineer review."
+      },
+      {
+        "id": "REF-002",
+        "text": "Demo project rule: do not claim regulatory compliance or invent standards, equipment ratings, or field measurements."
+      }
+    ]
+  },
+  "input_sha256": "6dc38ac3f287daa1c6d5c3178af25fa2de3da0ed966ed023c98f0791b0f7b2e1",
+  "status": "REQUIRES_ENGINEER_REVIEW",
+  "estimate": {
+    "currency": "USD",
+    "subtotal": "7480.00",
+    "contingency_percent": "15",
+    "contingency_amount": "1122.00",
+    "total": "8602.00",
+    "items": [
+      {
+        "id": "COST-001",
+        "line_total": "5000.00"
+      },
+      {
+        "id": "COST-002",
+        "line_total": "1280.00"
+      },
+      {
+        "id": "COST-003",
+        "line_total": "1200.00"
+      }
+    ]
+  },
+  "schedule": {
+    "tasks": [
+      {
+        "id": "TASK-001",
+        "earliest_start_day": 0,
+        "earliest_finish_day": 2
+      },
+      {
+        "id": "TASK-002",
+        "earliest_start_day": 2,
+        "earliest_finish_day": 5
+      },
+      {
+        "id": "TASK-003",
+        "earliest_start_day": 2,
+        "earliest_finish_day": 4
+      },
+      {
+        "id": "TASK-004",
+        "earliest_start_day": 5,
+        "earliest_finish_day": 7
+      }
+    ],
+    "duration_days": 7
+  },
+  "agent_trace": [
+    {
+      "role": "design",
+      "mode": "offline"
+    },
+    {
+      "role": "document",
+      "mode": "offline"
+    },
+    {
+      "role": "review",
+      "mode": "offline"
+    }
+  ],
+  "source": {
+    "offering": "Designs, Specifications, Schedules, Cost Estimates",
+    "website": "https://www.mesainc.com/",
+    "scope": "Synthetic conceptual documentation and project-checklist review"
+  },
+  "assumptions": [
+    "Synthetic teaching inputs; no Mesa internal data or engineering approval.",
+    "Conceptual draft only; no equipment selection or regulatory certification.",
+    "USD costs are rounded per line, then contingency, using decimal half-up rounding.",
+    "Schedule uses elapsed dependency days; no calendar or resource leveling.",
+    "ComplianceReviewAgent checks project instructions, not legal/regulatory compliance."
+  ],
+  "design": {
+    "sections": [
+      {
+        "requirement_id": "REQ-001",
+        "concept": "OFFLINE TEMPLATE — DRAFT: Prepare a conceptual scope section for REQ-001. Record known inputs, drawing interfaces, assumptions, exclusions, and questions before detailed engineering.",
+        "missing_inputs": [
+          "Engineer-approved drawings, ratings, and project criteria"
+        ]
+      },
+      {
+        "requirement_id": "REQ-002",
+        "concept": "OFFLINE TEMPLATE — DRAFT: Prepare a conceptual scope section for REQ-002. Record known inputs, drawing interfaces, assumptions, exclusions, and questions before detailed engineering.",
+        "missing_inputs": [
+          "Engineer-approved drawings, ratings, and project criteria"
+        ]
+      },
+      {
+        "requirement_id": "REQ-003",
+        "concept": "OFFLINE TEMPLATE — DRAFT: Prepare a conceptual scope section for REQ-003. Record known inputs, drawing interfaces, assumptions, exclusions, and questions before detailed engineering.",
+        "missing_inputs": [
+          "Engineer-approved drawings, ratings, and project criteria"
+        ]
+      }
+    ]
+  },
+  "document": {
+    "specifications": [
+      {
+        "requirement_id": "REQ-001",
+        "draft_text": "OFFLINE TEMPLATE — DRAFT: The documentation package shall include a traceable section for REQ-001, an input/drawing register, unresolved assumptions, and an engineer review checklist. Concept basis: OFFLINE TEMPLATE — DRAFT: Prepare a conceptual scope section for REQ-001. Record known inputs, drawing interfaces, assumptions, exclusions, and questions before detailed engineering.",
+        "acceptance_check": "Engineer verifies requirement coverage, inputs, and assumptions."
+      },
+      {
+        "requirement_id": "REQ-002",
+        "draft_text": "OFFLINE TEMPLATE — DRAFT: The documentation package shall include a traceable section for REQ-002, an input/drawing register, unresolved assumptions, and an engineer review checklist. Concept basis: OFFLINE TEMPLATE — DRAFT: Prepare a conceptual scope section for REQ-002. Record known inputs, drawing interfaces, assumptions, exclusions, and questions before detailed engineering.",
+        "acceptance_check": "Engineer verifies requirement coverage, inputs, and assumptions."
+      },
+      {
+        "requirement_id": "REQ-003",
+        "draft_text": "OFFLINE TEMPLATE — DRAFT: The documentation package shall include a traceable section for REQ-003, an input/drawing register, unresolved assumptions, and an engineer review checklist. Concept basis: OFFLINE TEMPLATE — DRAFT: Prepare a conceptual scope section for REQ-003. Record known inputs, drawing interfaces, assumptions, exclusions, and questions before detailed engineering.",
+        "acceptance_check": "Engineer verifies requirement coverage, inputs, and assumptions."
+      }
+    ]
+  },
+  "review": {
+    "findings": [
+      {
+        "requirement_id": "REQ-001",
+        "severity": "warning",
+        "note": "OFFLINE TEMPLATE: Conceptual draft requires engineer input and review."
+      },
+      {
+        "requirement_id": "REQ-002",
+        "severity": "warning",
+        "note": "OFFLINE TEMPLATE: Conceptual draft requires engineer input and review."
+      },
+      {
+        "requirement_id": "REQ-003",
+        "severity": "warning",
+        "note": "OFFLINE TEMPLATE: Conceptual draft requires engineer input and review."
+      }
+    ],
+    "limitations": [
+      "Template checklist only; no regulatory certification or design validation."
+    ]
+  }
+}
