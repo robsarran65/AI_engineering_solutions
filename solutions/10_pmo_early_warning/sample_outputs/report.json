@@ -1,0 +1,856 @@
+{
+  "analysis": {
+    "schema_version": "1.0",
+    "synthetic": true,
+    "currency": "USD",
+    "as_of": "2026-10-30",
+    "previous_as_of": "2026-10-23",
+    "status": "REQUIRES_PM_REVIEW",
+    "projects": [
+      {
+        "id": "P001",
+        "name": "Substation expansion — synthetic",
+        "manager": "Sample PM A",
+        "budget": "100000.00",
+        "actual_cost": "60000.00",
+        "estimate_to_complete": "55000.00",
+        "remaining_committed_cost": "30000.00",
+        "eac": "115000.00",
+        "variance_at_completion": "-15000.00",
+        "overrun_amount": "15000.00",
+        "overrun_percent": "15.00",
+        "cpi": "0.8333",
+        "spi": "0.8333",
+        "max_finish_slip_days": 12,
+        "overdue_milestones": 1,
+        "open_high_issues": 1,
+        "overdue_issues": 1,
+        "flags": [
+          {
+            "code": "COST_OVERRUN",
+            "severity": "red",
+            "message": "Forecast cost overrun meets the configured high threshold.",
+            "evidence_ids": [
+              "P001.overrun_percent"
+            ]
+          },
+          {
+            "code": "FINISH_SLIP",
+            "severity": "red",
+            "message": "Maximum milestone finish slip meets the configured high threshold.",
+            "evidence_ids": [
+              "P001.max_finish_slip_days"
+            ]
+          },
+          {
+            "code": "LOW_CPI",
+            "severity": "amber",
+            "message": "CPI is below its configured watch threshold.",
+            "evidence_ids": [
+              "P001.cpi"
+            ]
+          },
+          {
+            "code": "LOW_SPI",
+            "severity": "amber",
+            "message": "SPI is below its configured watch threshold.",
+            "evidence_ids": [
+              "P001.spi"
+            ]
+          },
+          {
+            "code": "OPEN_HIGH_ISSUE",
+            "severity": "red",
+            "message": "At least one open high-severity issue needs PM review.",
+            "evidence_ids": [
+              "P001.open_high_issues"
+            ]
+          },
+          {
+            "code": "OVERDUE_MILESTONES",
+            "severity": "amber",
+            "message": "At least one incomplete milestone is past its baseline finish date.",
+            "evidence_ids": [
+              "P001.overdue_milestones"
+            ]
+          },
+          {
+            "code": "OVERDUE_ISSUES",
+            "severity": "amber",
+            "message": "At least one open issue is past its due date.",
+            "evidence_ids": [
+              "P001.overdue_issues"
+            ]
+          }
+        ],
+        "rag": "red",
+        "trend": {
+          "eac_delta": "10000.00",
+          "finish_slip_delta_days": 7,
+          "budget_changed": false,
+          "baseline_changed": false
+        },
+        "milestone_details": [
+          {
+            "id": "T1",
+            "name": "Inputs reviewed",
+            "baseline_finish": "2026-10-15",
+            "forecast_finish": "2026-10-18",
+            "actual_finish": "2026-10-18",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Design package ready",
+            "baseline_finish": "2026-10-28",
+            "forecast_finish": "2026-11-09",
+            "actual_finish": null,
+            "progress_percent": 60,
+            "depends_on": [
+              "T1"
+            ]
+          },
+          {
+            "id": "T3",
+            "name": "Engineering review complete",
+            "baseline_finish": "2026-11-10",
+            "forecast_finish": "2026-11-22",
+            "actual_finish": null,
+            "progress_percent": 0,
+            "depends_on": [
+              "T2"
+            ]
+          }
+        ],
+        "open_issue_details": [
+          {
+            "id": "I1",
+            "title": "Scope decision awaiting client input",
+            "owner": "Sample scope owner",
+            "severity": "high",
+            "due_date": "2026-10-26",
+            "status": "open",
+            "category": "scope"
+          }
+        ]
+      },
+      {
+        "id": "P002",
+        "name": "Transmission design — synthetic",
+        "manager": "Sample PM B",
+        "budget": "80000.00",
+        "actual_cost": "42000.00",
+        "estimate_to_complete": "42000.00",
+        "remaining_committed_cost": "18000.00",
+        "eac": "84000.00",
+        "variance_at_completion": "-4000.00",
+        "overrun_amount": "4000.00",
+        "overrun_percent": "5.00",
+        "cpi": "0.9524",
+        "spi": "1.0000",
+        "max_finish_slip_days": 4,
+        "overdue_milestones": 0,
+        "open_high_issues": 0,
+        "overdue_issues": 1,
+        "flags": [
+          {
+            "code": "COST_OVERRUN",
+            "severity": "amber",
+            "message": "Forecast cost overrun meets the configured watch threshold.",
+            "evidence_ids": [
+              "P002.overrun_percent"
+            ]
+          },
+          {
+            "code": "FINISH_SLIP",
+            "severity": "amber",
+            "message": "Maximum milestone finish slip meets the configured watch threshold.",
+            "evidence_ids": [
+              "P002.max_finish_slip_days"
+            ]
+          },
+          {
+            "code": "OVERDUE_ISSUES",
+            "severity": "amber",
+            "message": "At least one open issue is past its due date.",
+            "evidence_ids": [
+              "P002.overdue_issues"
+            ]
+          }
+        ],
+        "rag": "amber",
+        "trend": {
+          "eac_delta": "4000.00",
+          "finish_slip_delta_days": 3,
+          "budget_changed": false,
+          "baseline_changed": false
+        },
+        "milestone_details": [
+          {
+            "id": "T1",
+            "name": "Survey accepted",
+            "baseline_finish": "2026-10-20",
+            "forecast_finish": "2026-10-19",
+            "actual_finish": "2026-10-19",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Design review complete",
+            "baseline_finish": "2026-11-01",
+            "forecast_finish": "2026-11-05",
+            "actual_finish": null,
+            "progress_percent": 55,
+            "depends_on": [
+              "T1"
+            ]
+          }
+        ],
+        "open_issue_details": [
+          {
+            "id": "I1",
+            "title": "Approval package awaiting review",
+            "owner": "Sample approval owner",
+            "severity": "medium",
+            "due_date": "2026-10-29",
+            "status": "open",
+            "category": "approval"
+          }
+        ]
+      },
+      {
+        "id": "P003",
+        "name": "Hydro controls documentation — synthetic",
+        "manager": "Sample PM C",
+        "budget": "60000.00",
+        "actual_cost": "30000.00",
+        "estimate_to_complete": "28000.00",
+        "remaining_committed_cost": "12000.00",
+        "eac": "58000.00",
+        "variance_at_completion": "2000.00",
+        "overrun_amount": "0.00",
+        "overrun_percent": "0.00",
+        "cpi": "1.0667",
+        "spi": "1.0667",
+        "max_finish_slip_days": 0,
+        "overdue_milestones": 0,
+        "open_high_issues": 0,
+        "overdue_issues": 0,
+        "flags": [],
+        "rag": "green",
+        "trend": {
+          "eac_delta": "0.00",
+          "finish_slip_delta_days": 0,
+          "budget_changed": false,
+          "baseline_changed": false
+        },
+        "milestone_details": [
+          {
+            "id": "T1",
+            "name": "Requirements accepted",
+            "baseline_finish": "2026-10-21",
+            "forecast_finish": "2026-10-20",
+            "actual_finish": "2026-10-20",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Documentation review",
+            "baseline_finish": "2026-11-05",
+            "forecast_finish": "2026-11-05",
+            "actual_finish": null,
+            "progress_percent": 50,
+            "depends_on": [
+              "T1"
+            ]
+          }
+        ],
+        "open_issue_details": []
+      }
+    ],
+    "portfolio": {
+      "project_count": 3,
+      "budget": "240000.00",
+      "actual_cost": "132000.00",
+      "eac": "257000.00",
+      "overrun_amount": "19000.00",
+      "net_variance_at_completion": "-17000.00",
+      "red_count": 1,
+      "amber_count": 1,
+      "green_count": 1,
+      "cpi": "0.9242",
+      "spi": "0.9385"
+    },
+    "evidence": {
+      "P001.budget": {
+        "project_id": "P001",
+        "metric": "budget",
+        "value": "100000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].approved_budget"
+      },
+      "P001.actual_cost": {
+        "project_id": "P001",
+        "metric": "actual_cost",
+        "value": "60000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].actual_cost"
+      },
+      "P001.estimate_to_complete": {
+        "project_id": "P001",
+        "metric": "estimate_to_complete",
+        "value": "55000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].estimate_to_complete"
+      },
+      "P001.remaining_committed_cost": {
+        "project_id": "P001",
+        "metric": "remaining_committed_cost",
+        "value": "30000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].remaining_committed_cost (included in ETC)"
+      },
+      "P001.eac": {
+        "project_id": "P001",
+        "metric": "eac",
+        "value": "115000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].actual_cost + $.current.projects[0].estimate_to_complete"
+      },
+      "P001.variance_at_completion": {
+        "project_id": "P001",
+        "metric": "variance_at_completion",
+        "value": "-15000.00",
+        "unit": "USD",
+        "source": "approved_budget - (actual_cost + estimate_to_complete)"
+      },
+      "P001.overrun_amount": {
+        "project_id": "P001",
+        "metric": "overrun_amount",
+        "value": "15000.00",
+        "unit": "USD",
+        "source": "max(actual_cost + estimate_to_complete - approved_budget, 0)"
+      },
+      "P001.overrun_percent": {
+        "project_id": "P001",
+        "metric": "overrun_percent",
+        "value": "15.00",
+        "unit": "percent",
+        "source": "100 * max(EAC - approved_budget, 0) / approved_budget",
+        "raw_value": "15.00"
+      },
+      "P001.cpi": {
+        "project_id": "P001",
+        "metric": "cpi",
+        "value": "0.8333",
+        "unit": "ratio",
+        "source": "earned_value / actual_cost; undefined when actual_cost = 0",
+        "raw_value": "0.8333333333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "P001.spi": {
+        "project_id": "P001",
+        "metric": "spi",
+        "value": "0.8333",
+        "unit": "ratio",
+        "source": "earned_value / planned_value; undefined when planned_value = 0",
+        "raw_value": "0.8333333333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "P001.max_finish_slip_days": {
+        "project_id": "P001",
+        "metric": "max_finish_slip_days",
+        "value": 12,
+        "unit": "days",
+        "source": "max(0, (actual_finish or forecast_finish) - baseline_finish) over $.current.projects[0].tasks"
+      },
+      "P001.overdue_milestones": {
+        "project_id": "P001",
+        "metric": "overdue_milestones",
+        "value": 1,
+        "unit": "count",
+        "source": "count incomplete $.current.projects[0].tasks with baseline_finish < $.current.as_of"
+      },
+      "P001.open_high_issues": {
+        "project_id": "P001",
+        "metric": "open_high_issues",
+        "value": 1,
+        "unit": "count",
+        "source": "count $.current.projects[0].issues where status=open and severity=high"
+      },
+      "P001.overdue_issues": {
+        "project_id": "P001",
+        "metric": "overdue_issues",
+        "value": 1,
+        "unit": "count",
+        "source": "count $.current.projects[0].issues where status=open and due_date < $.current.as_of"
+      },
+      "P001.earned_value": {
+        "project_id": "P001",
+        "metric": "earned_value",
+        "value": "50000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].earned_value"
+      },
+      "P001.planned_value": {
+        "project_id": "P001",
+        "metric": "planned_value",
+        "value": "60000.00",
+        "unit": "USD",
+        "source": "$.current.projects[0].planned_value"
+      },
+      "P001.rag": {
+        "project_id": "P001",
+        "metric": "rag",
+        "value": "red",
+        "unit": "status",
+        "source": "highest configured flag severity; green if no flags"
+      },
+      "P002.budget": {
+        "project_id": "P002",
+        "metric": "budget",
+        "value": "80000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].approved_budget"
+      },
+      "P002.actual_cost": {
+        "project_id": "P002",
+        "metric": "actual_cost",
+        "value": "42000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].actual_cost"
+      },
+      "P002.estimate_to_complete": {
+        "project_id": "P002",
+        "metric": "estimate_to_complete",
+        "value": "42000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].estimate_to_complete"
+      },
+      "P002.remaining_committed_cost": {
+        "project_id": "P002",
+        "metric": "remaining_committed_cost",
+        "value": "18000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].remaining_committed_cost (included in ETC)"
+      },
+      "P002.eac": {
+        "project_id": "P002",
+        "metric": "eac",
+        "value": "84000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].actual_cost + $.current.projects[1].estimate_to_complete"
+      },
+      "P002.variance_at_completion": {
+        "project_id": "P002",
+        "metric": "variance_at_completion",
+        "value": "-4000.00",
+        "unit": "USD",
+        "source": "approved_budget - (actual_cost + estimate_to_complete)"
+      },
+      "P002.overrun_amount": {
+        "project_id": "P002",
+        "metric": "overrun_amount",
+        "value": "4000.00",
+        "unit": "USD",
+        "source": "max(actual_cost + estimate_to_complete - approved_budget, 0)"
+      },
+      "P002.overrun_percent": {
+        "project_id": "P002",
+        "metric": "overrun_percent",
+        "value": "5.00",
+        "unit": "percent",
+        "source": "100 * max(EAC - approved_budget, 0) / approved_budget",
+        "raw_value": "5.00"
+      },
+      "P002.cpi": {
+        "project_id": "P002",
+        "metric": "cpi",
+        "value": "0.9524",
+        "unit": "ratio",
+        "source": "earned_value / actual_cost; undefined when actual_cost = 0",
+        "raw_value": "0.9523809523809523809523809523809523809523809523809523809523809523809524"
+      },
+      "P002.spi": {
+        "project_id": "P002",
+        "metric": "spi",
+        "value": "1.0000",
+        "unit": "ratio",
+        "source": "earned_value / planned_value; undefined when planned_value = 0",
+        "raw_value": "1"
+      },
+      "P002.max_finish_slip_days": {
+        "project_id": "P002",
+        "metric": "max_finish_slip_days",
+        "value": 4,
+        "unit": "days",
+        "source": "max(0, (actual_finish or forecast_finish) - baseline_finish) over $.current.projects[1].tasks"
+      },
+      "P002.overdue_milestones": {
+        "project_id": "P002",
+        "metric": "overdue_milestones",
+        "value": 0,
+        "unit": "count",
+        "source": "count incomplete $.current.projects[1].tasks with baseline_finish < $.current.as_of"
+      },
+      "P002.open_high_issues": {
+        "project_id": "P002",
+        "metric": "open_high_issues",
+        "value": 0,
+        "unit": "count",
+        "source": "count $.current.projects[1].issues where status=open and severity=high"
+      },
+      "P002.overdue_issues": {
+        "project_id": "P002",
+        "metric": "overdue_issues",
+        "value": 1,
+        "unit": "count",
+        "source": "count $.current.projects[1].issues where status=open and due_date < $.current.as_of"
+      },
+      "P002.earned_value": {
+        "project_id": "P002",
+        "metric": "earned_value",
+        "value": "40000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].earned_value"
+      },
+      "P002.planned_value": {
+        "project_id": "P002",
+        "metric": "planned_value",
+        "value": "40000.00",
+        "unit": "USD",
+        "source": "$.current.projects[1].planned_value"
+      },
+      "P002.rag": {
+        "project_id": "P002",
+        "metric": "rag",
+        "value": "amber",
+        "unit": "status",
+        "source": "highest configured flag severity; green if no flags"
+      },
+      "P003.budget": {
+        "project_id": "P003",
+        "metric": "budget",
+        "value": "60000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].approved_budget"
+      },
+      "P003.actual_cost": {
+        "project_id": "P003",
+        "metric": "actual_cost",
+        "value": "30000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].actual_cost"
+      },
+      "P003.estimate_to_complete": {
+        "project_id": "P003",
+        "metric": "estimate_to_complete",
+        "value": "28000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].estimate_to_complete"
+      },
+      "P003.remaining_committed_cost": {
+        "project_id": "P003",
+        "metric": "remaining_committed_cost",
+        "value": "12000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].remaining_committed_cost (included in ETC)"
+      },
+      "P003.eac": {
+        "project_id": "P003",
+        "metric": "eac",
+        "value": "58000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].actual_cost + $.current.projects[2].estimate_to_complete"
+      },
+      "P003.variance_at_completion": {
+        "project_id": "P003",
+        "metric": "variance_at_completion",
+        "value": "2000.00",
+        "unit": "USD",
+        "source": "approved_budget - (actual_cost + estimate_to_complete)"
+      },
+      "P003.overrun_amount": {
+        "project_id": "P003",
+        "metric": "overrun_amount",
+        "value": "0.00",
+        "unit": "USD",
+        "source": "max(actual_cost + estimate_to_complete - approved_budget, 0)"
+      },
+      "P003.overrun_percent": {
+        "project_id": "P003",
+        "metric": "overrun_percent",
+        "value": "0.00",
+        "unit": "percent",
+        "source": "100 * max(EAC - approved_budget, 0) / approved_budget",
+        "raw_value": "0"
+      },
+      "P003.cpi": {
+        "project_id": "P003",
+        "metric": "cpi",
+        "value": "1.0667",
+        "unit": "ratio",
+        "source": "earned_value / actual_cost; undefined when actual_cost = 0",
+        "raw_value": "1.066666666666666666666666666666666666666666666666666666666666666666667"
+      },
+      "P003.spi": {
+        "project_id": "P003",
+        "metric": "spi",
+        "value": "1.0667",
+        "unit": "ratio",
+        "source": "earned_value / planned_value; undefined when planned_value = 0",
+        "raw_value": "1.066666666666666666666666666666666666666666666666666666666666666666667"
+      },
+      "P003.max_finish_slip_days": {
+        "project_id": "P003",
+        "metric": "max_finish_slip_days",
+        "value": 0,
+        "unit": "days",
+        "source": "max(0, (actual_finish or forecast_finish) - baseline_finish) over $.current.projects[2].tasks"
+      },
+      "P003.overdue_milestones": {
+        "project_id": "P003",
+        "metric": "overdue_milestones",
+        "value": 0,
+        "unit": "count",
+        "source": "count incomplete $.current.projects[2].tasks with baseline_finish < $.current.as_of"
+      },
+      "P003.open_high_issues": {
+        "project_id": "P003",
+        "metric": "open_high_issues",
+        "value": 0,
+        "unit": "count",
+        "source": "count $.current.projects[2].issues where status=open and severity=high"
+      },
+      "P003.overdue_issues": {
+        "project_id": "P003",
+        "metric": "overdue_issues",
+        "value": 0,
+        "unit": "count",
+        "source": "count $.current.projects[2].issues where status=open and due_date < $.current.as_of"
+      },
+      "P003.earned_value": {
+        "project_id": "P003",
+        "metric": "earned_value",
+        "value": "32000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].earned_value"
+      },
+      "P003.planned_value": {
+        "project_id": "P003",
+        "metric": "planned_value",
+        "value": "30000.00",
+        "unit": "USD",
+        "source": "$.current.projects[2].planned_value"
+      },
+      "P003.rag": {
+        "project_id": "P003",
+        "metric": "rag",
+        "value": "green",
+        "unit": "status",
+        "source": "highest configured flag severity; green if no flags"
+      }
+    },
+    "quality_warnings": [
+      "Risk coverage is limited to supplied cost, finish milestones, and issue data; green is not a safety or completion guarantee."
+    ],
+    "policy": {
+      "cost_watch_percent": "5",
+      "cost_high_percent": "10",
+      "schedule_watch_days": 3,
+      "schedule_high_days": 10,
+      "cpi_watch_below": "0.95",
+      "spi_watch_below": "0.95"
+    }
+  },
+  "agents": {
+    "mode": "offline",
+    "ai_status": "NOT_REQUESTED",
+    "roles": {
+      "cost": {
+        "observations": [
+          {
+            "project_id": "P001",
+            "evidence_ids": [
+              "P001.eac",
+              "P001.budget",
+              "P001.overrun_amount",
+              "P001.cpi"
+            ],
+            "summary": "OFFLINE TEMPLATE: EAC USD 115000.00 versus approved budget USD 100000.00; positive overrun USD 15000.00. Remaining commitments are inside ETC.",
+            "recommended_action": "PM should review the remaining estimate, commitments, scope, and contingency basis."
+          },
+          {
+            "project_id": "P002",
+            "evidence_ids": [
+              "P002.eac",
+              "P002.budget",
+              "P002.overrun_amount",
+              "P002.cpi"
+            ],
+            "summary": "OFFLINE TEMPLATE: EAC USD 84000.00 versus approved budget USD 80000.00; positive overrun USD 4000.00. Remaining commitments are inside ETC.",
+            "recommended_action": "PM should review the remaining estimate, commitments, scope, and contingency basis."
+          },
+          {
+            "project_id": "P003",
+            "evidence_ids": [
+              "P003.eac",
+              "P003.budget",
+              "P003.overrun_amount",
+              "P003.cpi"
+            ],
+            "summary": "OFFLINE TEMPLATE: EAC USD 58000.00 versus approved budget USD 60000.00; positive overrun USD 0.00. Remaining commitments are inside ETC.",
+            "recommended_action": "PM should confirm the estimate to complete and monitor future cost changes."
+          }
+        ],
+        "limitations": [
+          "Offline rule/template output, not a model-generated forecast.",
+          "EAC uses the project team estimate to complete; validate that estimate."
+        ]
+      },
+      "schedule": {
+        "observations": [
+          {
+            "project_id": "P001",
+            "evidence_ids": [
+              "P001.max_finish_slip_days",
+              "P001.overdue_milestones",
+              "P001.spi"
+            ],
+            "summary": "OFFLINE TEMPLATE: Maximum milestone finish slip is 12 days; 1 milestone(s) are overdue and incomplete.",
+            "recommended_action": "PM should validate forecast finish dates and review outstanding dependencies; do not infer a new finish date from SPI."
+          },
+          {
+            "project_id": "P002",
+            "evidence_ids": [
+              "P002.max_finish_slip_days",
+              "P002.overdue_milestones",
+              "P002.spi"
+            ],
+            "summary": "OFFLINE TEMPLATE: Maximum milestone finish slip is 4 days; 0 milestone(s) are overdue and incomplete.",
+            "recommended_action": "PM should validate forecast finish dates and review outstanding dependencies; do not infer a new finish date from SPI."
+          },
+          {
+            "project_id": "P003",
+            "evidence_ids": [
+              "P003.max_finish_slip_days",
+              "P003.overdue_milestones",
+              "P003.spi"
+            ],
+            "summary": "OFFLINE TEMPLATE: Maximum milestone finish slip is 0 days; 0 milestone(s) are overdue and incomplete.",
+            "recommended_action": "PM should validate forecast finish dates and review outstanding dependencies; do not infer a new finish date from SPI."
+          }
+        ],
+        "limitations": [
+          "Offline rule/template output, not a schedule simulation.",
+          "Finish forecasts come from inputs; resource calendars are not modeled."
+        ]
+      },
+      "risk": {
+        "observations": [
+          {
+            "project_id": "P001",
+            "evidence_ids": [
+              "P001.rag",
+              "P001.open_high_issues",
+              "P001.overdue_issues"
+            ],
+            "summary": "OFFLINE TEMPLATE: Configured status is RED; 1 open high-severity issue(s) and 1 overdue issue(s).",
+            "recommended_action": "PM should examine cited cost/schedule evidence and assign owners to unresolved issues before deciding on an intervention."
+          },
+          {
+            "project_id": "P002",
+            "evidence_ids": [
+              "P002.rag",
+              "P002.open_high_issues",
+              "P002.overdue_issues"
+            ],
+            "summary": "OFFLINE TEMPLATE: Configured status is AMBER; 0 open high-severity issue(s) and 1 overdue issue(s).",
+            "recommended_action": "PM should examine cited cost/schedule evidence and assign owners to unresolved issues before deciding on an intervention."
+          },
+          {
+            "project_id": "P003",
+            "evidence_ids": [
+              "P003.rag",
+              "P003.open_high_issues",
+              "P003.overdue_issues"
+            ],
+            "summary": "OFFLINE TEMPLATE: Configured status is GREEN; 0 open high-severity issue(s) and 0 overdue issue(s).",
+            "recommended_action": "PM should examine cited cost/schedule evidence and assign owners to unresolved issues before deciding on an intervention."
+          }
+        ],
+        "limitations": [
+          "Offline checklist output; RAG means configured rule results only.",
+          "Risk correlations, probabilities, and causal effects are not estimated."
+        ]
+      },
+      "executive": {
+        "observations": [
+          {
+            "project_id": "P001",
+            "evidence_ids": [
+              "P001.rag",
+              "P001.eac",
+              "P001.max_finish_slip_days"
+            ],
+            "summary": "OFFLINE TEMPLATE: Substation expansion — synthetic is RED. EAC USD 115000.00; maximum milestone finish slip 12 days.",
+            "recommended_action": "PM should examine cited cost/schedule evidence and assign owners to unresolved issues before deciding on an intervention."
+          },
+          {
+            "project_id": "P002",
+            "evidence_ids": [
+              "P002.rag",
+              "P002.eac",
+              "P002.max_finish_slip_days"
+            ],
+            "summary": "OFFLINE TEMPLATE: Transmission design — synthetic is AMBER. EAC USD 84000.00; maximum milestone finish slip 4 days.",
+            "recommended_action": "PM should examine cited cost/schedule evidence and assign owners to unresolved issues before deciding on an intervention."
+          },
+          {
+            "project_id": "P003",
+            "evidence_ids": [
+              "P003.rag",
+              "P003.eac",
+              "P003.max_finish_slip_days"
+            ],
+            "summary": "OFFLINE TEMPLATE: Hydro controls documentation — synthetic is GREEN. EAC USD 58000.00; maximum milestone finish slip 0 days.",
+            "recommended_action": "PM should examine cited cost/schedule evidence and assign owners to unresolved issues before deciding on an intervention."
+          }
+        ],
+        "limitations": [
+          "Offline executive template; project manager review remains required.",
+          "No budgets, dates, approvals, or project systems are changed."
+        ]
+      }
+    },
+    "trace": [
+      {
+        "role": "cost",
+        "mode": "offline"
+      },
+      {
+        "role": "schedule",
+        "mode": "offline"
+      },
+      {
+        "role": "risk",
+        "mode": "offline"
+      },
+      {
+        "role": "executive",
+        "mode": "offline"
+      }
+    ]
+  },
+  "provenance": {
+    "solution_version": "0.1.0",
+    "code_sha256": "da2f147d4c22f07a282ea103e3619dadc847d2c01cf26a178c4098c1c2cc9921",
+    "input_sha256": "9be3177ff5f766a0c5e3daeade181f47d6ed2781de6586bbb107df99e9cf15f8",
+    "generated_utc": "2026-10-30T17:48:51.424229+00:00",
+    "mode": "offline",
+    "model": null,
+    "input_filename": "sample_portfolio.json"
+  },
+  "failure": null
+}

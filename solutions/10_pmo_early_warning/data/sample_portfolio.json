@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "synthetic": true,
+  "currency": "USD",
+  "current": {
+    "as_of": "2026-10-30",
+    "projects": [
+      {
+        "id": "P001",
+        "name": "Substation expansion \u2014 synthetic",
+        "manager": "Sample PM A",
+        "approved_budget": "100000",
+        "planned_value": "60000",
+        "earned_value": "50000",
+        "actual_cost": "60000",
+        "estimate_to_complete": "55000",
+        "remaining_committed_cost": "30000",
+        "tasks": [
+          {
+            "id": "T1",
+            "name": "Inputs reviewed",
+            "baseline_finish": "2026-10-15",
+            "forecast_finish": "2026-10-18",
+            "actual_finish": "2026-10-18",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Design package ready",
+            "baseline_finish": "2026-10-28",
+            "forecast_finish": "2026-11-09",
+            "actual_finish": null,
+            "progress_percent": 60,
+            "depends_on": [
+              "T1"
+            ]
+          },
+          {
+            "id": "T3",
+            "name": "Engineering review complete",
+            "baseline_finish": "2026-11-10",
+            "forecast_finish": "2026-11-22",
+            "actual_finish": null,
+            "progress_percent": 0,
+            "depends_on": [
+              "T2"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "id": "I1",
+            "title": "Scope decision awaiting client input",
+            "owner": "Sample scope owner",
+            "severity": "high",
+            "due_date": "2026-10-26",
+            "status": "open",
+            "category": "scope"
+          },
+          {
+            "id": "I2",
+            "title": "Drawing clarification resolved",
+            "owner": "Sample engineering lead",
+            "severity": "medium",
+            "due_date": "2026-10-20",
+            "status": "closed",
+            "category": "quality"
+          }
+        ]
+      },
+      {
+        "id": "P002",
+        "name": "Transmission design \u2014 synthetic",
+        "manager": "Sample PM B",
+        "approved_budget": "80000",
+        "planned_value": "40000",
+        "earned_value": "40000",
+        "actual_cost": "42000",
+        "estimate_to_complete": "42000",
+        "remaining_committed_cost": "18000",
+        "tasks": [
+          {
+            "id": "T1",
+            "name": "Survey accepted",
+            "baseline_finish": "2026-10-20",
+            "forecast_finish": "2026-10-19",
+            "actual_finish": "2026-10-19",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Design review complete",
+            "baseline_finish": "2026-11-01",
+            "forecast_finish": "2026-11-05",
+            "actual_finish": null,
+            "progress_percent": 55,
+            "depends_on": [
+              "T1"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "id": "I1",
+            "title": "Approval package awaiting review",
+            "owner": "Sample approval owner",
+            "severity": "medium",
+            "due_date": "2026-10-29",
+            "status": "open",
+            "category": "approval"
+          }
+        ]
+      },
+      {
+        "id": "P003",
+        "name": "Hydro controls documentation \u2014 synthetic",
+        "manager": "Sample PM C",
+        "approved_budget": "60000",
+        "planned_value": "30000",
+        "earned_value": "32000",
+        "actual_cost": "30000",
+        "estimate_to_complete": "28000",
+        "remaining_committed_cost": "12000",
+        "tasks": [
+          {
+            "id": "T1",
+            "name": "Requirements accepted",
+            "baseline_finish": "2026-10-21",
+            "forecast_finish": "2026-10-20",
+            "actual_finish": "2026-10-20",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Documentation review",
+            "baseline_finish": "2026-11-05",
+            "forecast_finish": "2026-11-05",
+            "actual_finish": null,
+            "progress_percent": 50,
+            "depends_on": [
+              "T1"
+            ]
+          }
+        ],
+        "issues": []
+      }
+    ]
+  },
+  "previous": {
+    "as_of": "2026-10-23",
+    "projects": [
+      {
+        "id": "P001",
+        "name": "Substation expansion \u2014 synthetic",
+        "manager": "Sample PM A",
+        "approved_budget": "100000",
+        "planned_value": "50000",
+        "earned_value": "43000",
+        "actual_cost": "50000",
+        "estimate_to_complete": "55000",
+        "remaining_committed_cost": "30000",
+        "tasks": [
+          {
+            "id": "T1",
+            "name": "Inputs reviewed",
+            "baseline_finish": "2026-10-15",
+            "forecast_finish": "2026-10-18",
+            "actual_finish": "2026-10-18",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Design package ready",
+            "baseline_finish": "2026-10-28",
+            "forecast_finish": "2026-11-02",
+            "actual_finish": null,
+            "progress_percent": 45,
+            "depends_on": [
+              "T1"
+            ]
+          },
+          {
+            "id": "T3",
+            "name": "Engineering review complete",
+            "baseline_finish": "2026-11-10",
+            "forecast_finish": "2026-11-15",
+            "actual_finish": null,
+            "progress_percent": 0,
+            "depends_on": [
+              "T2"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "id": "I1",
+            "title": "Scope decision awaiting client input",
+            "owner": "Sample scope owner",
+            "severity": "high",
+            "due_date": "2026-10-26",
+            "status": "open",
+            "category": "scope"
+          }
+        ]
+      },
+      {
+        "id": "P002",
+        "name": "Transmission design \u2014 synthetic",
+        "manager": "Sample PM B",
+        "approved_budget": "80000",
+        "planned_value": "30000",
+        "earned_value": "30000",
+        "actual_cost": "30000",
+        "estimate_to_complete": "50000",
+        "remaining_committed_cost": "20000",
+        "tasks": [
+          {
+            "id": "T1",
+            "name": "Survey accepted",
+            "baseline_finish": "2026-10-20",
+            "forecast_finish": "2026-10-19",
+            "actual_finish": "2026-10-19",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Design review complete",
+            "baseline_finish": "2026-11-01",
+            "forecast_finish": "2026-11-02",
+            "actual_finish": null,
+            "progress_percent": 35,
+            "depends_on": [
+              "T1"
+            ]
+          }
+        ],
+        "issues": [
+          {
+            "id": "I1",
+            "title": "Approval package awaiting review",
+            "owner": "Sample approval owner",
+            "severity": "medium",
+            "due_date": "2026-10-29",
+            "status": "open",
+            "category": "approval"
+          }
+        ]
+      },
+      {
+        "id": "P003",
+        "name": "Hydro controls documentation \u2014 synthetic",
+        "manager": "Sample PM C",
+        "approved_budget": "60000",
+        "planned_value": "23000",
+        "earned_value": "24000",
+        "actual_cost": "23000",
+        "estimate_to_complete": "35000",
+        "remaining_committed_cost": "12000",
+        "tasks": [
+          {
+            "id": "T1",
+            "name": "Requirements accepted",
+            "baseline_finish": "2026-10-21",
+            "forecast_finish": "2026-10-20",
+            "actual_finish": "2026-10-20",
+            "progress_percent": 100,
+            "depends_on": []
+          },
+          {
+            "id": "T2",
+            "name": "Documentation review",
+            "baseline_finish": "2026-11-05",
+            "forecast_finish": "2026-11-05",
+            "actual_finish": null,
+            "progress_percent": 30,
+            "depends_on": [
+              "T1"
+            ]
+          }
+        ],
+        "issues": []
+      }
+    ]
+  },
+  "policy": {
+    "cost_watch_percent": "5",
+    "cost_high_percent": "10",
+    "schedule_watch_days": 3,
+    "schedule_high_days": 10,
+    "cpi_watch_below": "0.95",
+    "spi_watch_below": "0.95"
+  }
+}

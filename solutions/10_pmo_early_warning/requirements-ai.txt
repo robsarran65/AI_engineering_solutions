@@ -1,0 +1,3 @@
+# Optional only: offline analysis and tests use Python's standard library.
+# Install into a virtual environment; choose a structured-output-compatible model.
+openai
